@@ -124,7 +124,7 @@
     right: 0.25em;
   }
 
-  label{
+  span{
     display: block;
     text-transform: uppercase;
     text-align: center;
@@ -252,7 +252,7 @@
             on:keypress={onlyChars("#0123456789abcdefABCFDEF")}
             on:input={event => update(event.target.value)}
           />
-          <label>hex</label>
+          <span>hex</span>
         </div>
       {:else if fieldsIndex === 1}
         <div class="rgba-wrap">
@@ -265,7 +265,7 @@
               on:keypress={onlyNumbers}
               on:input={event => update({r: parseInt(event.target.value), g, b, a})}
             />
-            <label>r</label>
+            <span>r</span>
           </div>
           <div class="input-wrap">
             <input
@@ -276,7 +276,7 @@
               on:keypress={onlyNumbers}
               on:input={event => update({r, g: parseInt(event.target.value), b, a})}
             />
-            <label>g</label>
+            <span>g</span>
           </div>
           <div class="input-wrap">
             <input class="rgba"
@@ -286,7 +286,7 @@
               on:keypress={onlyNumbers}
               on:input={event => update({r, g, b: parseInt(event.target.value), a})}
             />
-            <label>b</label>
+            <span>b</span>
           </div>
           {#if !disableAlpha}
             <div class="input-wrap">
@@ -298,7 +298,7 @@
                 on:keypress={onlyNumbersAndDot}
                 on:input={event => updateAlpha(parseFloat(event.target.value))}
               />
-              <label>a</label>
+              <span>a</span>
             </div>
           {/if}
         </div>
@@ -312,7 +312,7 @@
               on:keypress={onlyNumbers}
               on:input={event => update({h: parseInt(event.target.value), s, l, a})}
             />
-            <label>h</label>
+            <span>h</span>
           </div>
           <div class="input-wrap">
             <input
@@ -323,7 +323,7 @@
               on:keypress={onlyNumbers}
               on:input={event => update({h, s: parseFloat(event.target.value) / 100, l, a})}
             />
-            <label>s</label>
+            <span>s</span>
           </div>
           <div class="input-wrap">
             <input
@@ -334,7 +334,7 @@
               on:keypress={onlyNumbers}
               on:input={event => update({h, s, l: parseFloat(event.target.value) / 100, a})}
             />
-            <label>l</label>
+            <span>l</span>
           </div>
           {#if !disableAlpha}
             <div class="input-wrap">
@@ -346,7 +346,7 @@
                 on:keypress={onlyNumbersAndDot}
                 on:input={event => updateAlpha(parseFloat(event.target.value))}
               />
-              <label>a</label>
+              <span>a</span>
             </div>
           {/if}
         </div>
@@ -359,4 +359,4 @@
     </div>
   </div>
 
-</div> 
+</div>
